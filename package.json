@@ -1,0 +1,59 @@
+{
+    "name": "liberty-basic",
+    "displayName": "Liberty BASIC",
+    "description": "Support for Liberty BASIC",
+    "version": "1.0.6",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "icon": "images/liberty.png",
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Liberty BASIC",
+                "uiTheme": "vs",
+                "path": "./themes/liberty-basic-theme.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "libertybasic",
+                "aliases": [
+                    "Liberty BASIC",
+                    "libertybasic"
+                ],
+                "extensions": [
+                    ".bas"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "libertybasic",
+                "scopeName": "source.libertybasic",
+                "path": "./syntaxes/libertybasic.tmLanguage.json"
+            }
+        ]
+    },
+    "publisher": "vytenis-narusis",
+    "main": "./out/main.js",
+    "activationEvents": [
+        "onLanguage:libertybasic"
+    ],
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "npx tsc -p ./",
+        "lint": "npx tslint -p ./",
+        "watch": "npx tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.0",
+        "@types/vscode": "^1.32.0",
+        "tslint": "^5.19.0",
+        "typescript": "^3.8.3"
+    }
+}

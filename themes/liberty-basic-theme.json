@@ -1,0 +1,24 @@
+{
+    "name": "Liberty BASIC",
+    "type": "light",
+    "include": "./light_plus.json",
+    "colors": {
+    },
+    "tokenColors": [
+        { "scope": [ "storage.type" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "keyword.control" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "constant.numeric" ], "settings": { "foreground": "#f00" } },
+        { "scope": [ "string.quoted" ], "settings": { "foreground": "#008000" } },
+        { "scope": [ "entity.name" ], "settings": { "foreground": "#008080" } },
+        { "scope": [ "support.function" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "support.function.lbuicomponent" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "support.function.lbsubroutine" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "support.function.lbfunction" ], "settings": { "foreground": "#800080" } },
+        { "scope": [ "keyword.operator.lbwordoperator.libertybasic" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "comment.line" ], "settings": { "foreground": "#808080" } },
+        { "scope": [ "remhead.comment.line.lbremcomment.libertybasic" ], "settings": { "foreground": "#00f" } },
+        { "scope": [ "rembody.comment.line.lbremcomment.libertybasic" ], "settings": { "foreground": "#008080" } },
+        { "scope": [ "entity.name.tag.libertybasic" ], "settings": { "foreground": "#000" } },
+        { "scope": [ "entity.name.lbhandle.libertybasic" ], "settings": { "foreground": "#000" } }
+    ]
+}
