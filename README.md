@@ -15,9 +15,9 @@ If you have any issues visit Liberty BASIC forums at https://libertybasiccom.pro
 
 ## Latest release notes
 
-### 1.0.5
+### 1.0.6
 
-Added Liberty BASIC color theme!
+Added GitHub repository link.
 
 More at: https://marketplace.visualstudio.com/items/vytenis-narusis.liberty-basic/changelog
 

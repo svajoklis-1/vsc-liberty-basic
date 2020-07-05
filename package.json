@@ -7,6 +7,10 @@
         "vscode": "^1.44.0"
     },
     "icon": "images/liberty.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/svajoklis-1/vsc-liberty-basic.git"
+    },
     "categories": [
         "Programming Languages"
     ],
