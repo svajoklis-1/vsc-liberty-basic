@@ -15,7 +15,7 @@ If you have any issues visit Liberty BASIC forums at https://libertybasiccom.pro
 
 ## Latest release notes
 
-### 1.0.6
+### 1.0.7
 
 Added GitHub repository link.
 

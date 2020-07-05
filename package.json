@@ -2,7 +2,7 @@
     "name": "liberty-basic",
     "displayName": "Liberty BASIC",
     "description": "Support for Liberty BASIC",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "engines": {
         "vscode": "^1.44.0"
     },

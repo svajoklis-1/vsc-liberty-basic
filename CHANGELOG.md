@@ -12,4 +12,4 @@
 
 2020-05-18 1.0.5: Add Liberty BASIC color theme for Liberty BASIC files.
 
-2020-07-05 1.0.6: Added GitHub repo link.
+2020-07-05 1.0.7: Added GitHub repo link.
