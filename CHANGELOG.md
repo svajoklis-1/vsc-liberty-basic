@@ -32,3 +32,11 @@
 - Folding for `SUB`, `FUNCTION`, block `IF`, `FOR`, `WHILE`, `DO`, `SELECT CASE`, and runs of comment lines.
 - Auto-indent after block openers and outdent on `END ...`, `NEXT`, `WEND`, `LOOP`, `ELSE` and `CASE`.
 - Double-click selects whole names, including dots, a trailing `$` and handle `#`.
+
+2026-10-13 1.1.1: Run programs in Liberty BASIC from VS Code.
+
+- Added **Run Program**, **Debug Program** and **Make TKN File** commands, which save the current file and start Liberty BASIC with its `-R`, `-D` or `-T` switch. Run and Debug also have buttons in the editor title bar.
+- New settings:
+  - `libertybasic.executablePath`: path to `liberty.exe`. The first run asks for it.
+  - `libertybasic.executableWrapper`: a command to start Liberty BASIC through, e.g. `["wine"]`.
+  - `libertybasic.minimizeEditor` (`-M`) and `libertybasic.exitWhenFinished` (`-A`), for the registered version of Liberty BASIC.

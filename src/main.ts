@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 
 import LibertyBasicDocumentSymbolProvider from "./symbol-provider";
 import LibertyBasicFoldingRangeProvider from "./folding-provider";
+import { registerRunCommands } from "./run-commands";
 
 const selector: vscode.DocumentSelector = { language: "libertybasic" };
 
@@ -18,4 +19,6 @@ export function activate (ctx: vscode.ExtensionContext): void
             new LibertyBasicFoldingRangeProvider()
         )
     );
+
+    registerRunCommands(ctx);
 }

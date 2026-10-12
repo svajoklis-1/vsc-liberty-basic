@@ -9,12 +9,26 @@ It adds:
 - outline of subs, functions and branch labels
 - code folding for subs, functions, loops, `IF` and `SELECT CASE` blocks
 - auto-indent for block statements
+- **Run Program**, **Debug Program** and **Make TKN File** commands that start Liberty BASIC on the current file
+
+## Running programs
+
+Set `libertybasic.executablePath` to your `liberty.exe` (the first run will ask for it), then use the ▶ button in the editor title bar or the `Liberty BASIC:` commands in the command palette. The file is saved first and opened by Liberty BASIC with its `-R` (run), `-D` (debug) or `-T` (make TKN) command-line switch. Program output and errors appear in Liberty BASIC's own windows.
+
+Settings:
+- `libertybasic.executablePath`: absolute path to `liberty.exe`
+- `libertybasic.executableWrapper`: a command to start it through, e.g. `["wine"]` on Linux or macOS
+- `libertybasic.minimizeEditor` (`-M`) and `libertybasic.exitWhenFinished` (`-A`): registered version of Liberty BASIC only
 
 ## Help needed?
 
 If you have any issues visit Liberty BASIC forums at https://libertybasiccom.proboards.com/
 
 ## Latest release notes
+
+### 1.1.1
+
+Added **Run Program**, **Debug Program** and **Make TKN File** commands that start Liberty BASIC on the current file. See [Running programs](#running-programs).
 
 ### 1.1.0
 

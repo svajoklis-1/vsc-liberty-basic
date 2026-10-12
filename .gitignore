@@ -4,3 +4,5 @@ node_modules
 out
 /ref
 CLAUDE.md
+test/fake-liberty/fake_liberty.log
+__pycache__

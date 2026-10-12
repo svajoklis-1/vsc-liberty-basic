@@ -2,7 +2,7 @@
     "name": "liberty-basic",
     "displayName": "Liberty BASIC",
     "description": "Support for Liberty BASIC",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -34,7 +34,84 @@
                 "scopeName": "source.libertybasic",
                 "path": "./syntaxes/libertybasic.tmLanguage.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "libertybasic.run",
+                "title": "Run Program",
+                "category": "Liberty BASIC",
+                "icon": "$(play)"
+            },
+            {
+                "command": "libertybasic.debug",
+                "title": "Debug Program",
+                "category": "Liberty BASIC",
+                "icon": "$(debug-alt)"
+            },
+            {
+                "command": "libertybasic.makeTkn",
+                "title": "Make TKN File",
+                "category": "Liberty BASIC"
+            }
+        ],
+        "menus": {
+            "editor/title/run": [
+                {
+                    "command": "libertybasic.run",
+                    "when": "editorLangId == libertybasic",
+                    "group": "navigation@0"
+                },
+                {
+                    "command": "libertybasic.debug",
+                    "when": "editorLangId == libertybasic",
+                    "group": "navigation@1"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "libertybasic.run",
+                    "when": "editorLangId == libertybasic"
+                },
+                {
+                    "command": "libertybasic.debug",
+                    "when": "editorLangId == libertybasic"
+                },
+                {
+                    "command": "libertybasic.makeTkn",
+                    "when": "editorLangId == libertybasic"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "Liberty BASIC",
+            "properties": {
+                "libertybasic.executablePath": {
+                    "type": "string",
+                    "default": "",
+                    "scope": "machine",
+                    "markdownDescription": "Absolute path to `liberty.exe`, used by **Run Program**, **Debug Program** and **Make TKN File**."
+                },
+                "libertybasic.executableWrapper": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "scope": "machine",
+                    "markdownDescription": "Command to start `#libertybasic.executablePath#` through, with its arguments, e.g. `[\"wine\"]` on Linux or macOS. Leave empty to start it directly."
+                },
+                "libertybasic.minimizeEditor": {
+                    "type": "boolean",
+                    "default": false,
+                    "markdownDescription": "Minimize the Liberty BASIC editor when running a program (`-M`). Registered version of Liberty BASIC only."
+                },
+                "libertybasic.exitWhenFinished": {
+                    "type": "boolean",
+                    "default": false,
+                    "markdownDescription": "Exit Liberty BASIC when the program finishes (`-A`). Registered version of Liberty BASIC only."
+                }
+            }
+        }
     },
     "publisher": "vytenis-narusis",
     "main": "./out/main.js",
