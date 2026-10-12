@@ -5,8 +5,10 @@
 This extension aims to add support for Liberty BASIC in Visual Studio Code.
 
 It adds:
-- syntax highlighting
-- outline feature for labels, functions and subroutines
+- syntax highlighting for Liberty BASIC 4.5.1
+- outline of subs, functions and branch labels
+- code folding for subs, functions, loops, `IF` and `SELECT CASE` blocks
+- auto-indent for block statements
 
 ## Help needed?
 
@@ -14,9 +16,9 @@ If you have any issues visit Liberty BASIC forums at https://libertybasiccom.pro
 
 ## Latest release notes
 
-### 1.0.7
+### 1.1.0
 
-Added GitHub repository link.
+The extension has been modernized and requires VS Code 1.100 or newer. Highlighting was reworked against the Liberty BASIC 4.5.1 documentation and now works with any color theme. The bundled Liberty BASIC theme has been removed. The outline now nests labels under their subs and functions, and folding and auto-indent were added.
 
 More at: https://marketplace.visualstudio.com/items/vytenis-narusis.liberty-basic/changelog
 
