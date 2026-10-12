@@ -6,7 +6,6 @@ This extension aims to add support for Liberty BASIC in Visual Studio Code.
 
 It adds:
 - syntax highlighting
-- color theme faithful to original Liberty BASIC IDE
 - outline feature for labels, functions and subroutines
 
 ## Help needed?

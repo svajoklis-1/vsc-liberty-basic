@@ -1,127 +1,61 @@
 import {
     DocumentSymbolProvider,
-    TextDocument, CancellationToken,
-    ProviderResult,
-    DocumentSymbol, SymbolInformation,
+    TextDocument,
+    DocumentSymbol,
     SymbolKind,
-    Range,
-    Position
+    Range
 } from "vscode";
 
-const labelRegexp = /((^|.*?:)[ \t]*)(\[[a-z._$][a-z._$0-9]+\])/i;
+import { analyze, Label, Routine } from "./structure";
+import { documentLines } from "./document-lines";
 
-const functionRegexp = /(((^|.*?:)[ \t]*)function[ \t]+)([a-z._$][a-z._$0-9]+)[ \t]*\((.*)\)/i;
+function lineRange (document: TextDocument, startLine: number, endLine: number): Range
+{
+    return new Range(startLine, 0, endLine, document.lineAt(endLine).text.length);
+}
 
-const subRegexp = /(((^|.*?:)[ \t]*)sub[ \t]+)([a-z._$][a-z._$0-9]+)[ \t]*(.*?)[ \t]*(:|$)/i;
+function labelSymbol (document: TextDocument, label: Label): DocumentSymbol
+{
+    return new DocumentSymbol(
+        label.name,
+        "",
+        SymbolKind.Key,
+        lineRange(document, label.line, label.endLine),
+        new Range(label.line, label.column, label.line, label.column + label.name.length)
+    );
+}
+
+function routineSymbol (document: TextDocument, routine: Routine): DocumentSymbol
+{
+    const detail = routine.kind === "function"
+        ? `function (${routine.params})`
+        : `sub ${routine.params}`.trimEnd();
+
+    const symbol = new DocumentSymbol(
+        routine.name,
+        detail,
+        SymbolKind.Function,
+        lineRange(document, routine.line, routine.endLine),
+        new Range(
+            routine.line, routine.nameColumn,
+            routine.line, routine.nameColumn + routine.name.length
+        )
+    );
+    symbol.children = routine.labels.map((label) => labelSymbol(document, label));
+    return symbol;
+}
 
 class LibertyBasicDocumentSymbolProvider implements DocumentSymbolProvider
 {
-    private matchLabels (document: TextDocument, symbols: DocumentSymbol[])
+    public provideDocumentSymbols (document: TextDocument): DocumentSymbol[]
     {
-        const lineCount = document.lineCount;
-        for (let i = 0; i < lineCount; i += 1)
-        {
-            let lineText = document.lineAt(i).text;
+        const structure = analyze(documentLines(document));
 
-            let charactersRemoved = 0;
-            let labelMatch = null;
-            while (labelMatch = lineText.match(labelRegexp))
-            {
-                const range = new Range(
-                    new Position(i, charactersRemoved + labelMatch[1].length),
-                    new Position(i, charactersRemoved + labelMatch[0].length)
-                );
-
-                symbols.push(
-                    new DocumentSymbol(
-                        labelMatch[3],
-                        "",
-                        SymbolKind.Null,
-                        range,
-                        range
-                    )
-                );
-
-                charactersRemoved += labelMatch[0].length;
-                lineText = lineText.replace(labelRegexp, "");
-            }
-        }
-    }
-
-    private matchFunctions (document: TextDocument, symbols: DocumentSymbol[])
-    {
-        const lineCount = document.lineCount;
-        for (let i = 0; i < lineCount; i += 1)
-        {
-            let lineText = document.lineAt(i).text;
-
-            let charactersRemoved = 0;
-            let functionMatch = null;
-            while (functionMatch = lineText.match(functionRegexp))
-            {
-                const range = new Range(
-                    new Position(i, charactersRemoved + functionMatch[2].length),
-                    new Position(i, charactersRemoved + functionMatch[0].length)
-                );
-
-                symbols.push(
-                    new DocumentSymbol(
-                        functionMatch[4],
-                        `function (${functionMatch[5]})`,
-                        SymbolKind.Function,
-                        range,
-                        range
-                    )
-                );
-
-                charactersRemoved += functionMatch[0].length;
-                lineText = lineText.replace(functionRegexp, "");
-            }
-        }
-    }
-
-    private matchSubs (document: TextDocument, symbols: DocumentSymbol[])
-    {
-        const lineCount = document.lineCount;
-        for (let i = 0; i < lineCount; i += 1)
-        {
-            let lineText = document.lineAt(i).text;
-
-            let charactersRemoved = 0;
-            let subMatch = null;
-            while (subMatch = lineText.match(subRegexp))
-            {
-                const range = new Range(
-                    new Position(i, charactersRemoved + subMatch[2].length),
-                    new Position(i, charactersRemoved + subMatch[0].length)
-                );
-
-                symbols.push(
-                    new DocumentSymbol(
-                        subMatch[4],
-                        `sub ${subMatch[5]}`,
-                        SymbolKind.Function,
-                        range,
-                        range
-                    )
-                );
-
-                charactersRemoved += subMatch[0].length;
-                lineText = lineText.replace(subRegexp, "");
-            }
-        }
-    }
-    
-    public provideDocumentSymbols (
-        document: TextDocument, token: CancellationToken
-    ): ProviderResult<SymbolInformation[] | DocumentSymbol[]>
-    {
-        const symbols: DocumentSymbol[] = [];
-
-        this.matchLabels(document, symbols);
-        this.matchFunctions(document, symbols);
-        this.matchSubs(document, symbols);
-
+        const symbols = [
+            ...structure.labels.map((label) => labelSymbol(document, label)),
+            ...structure.routines.map((routine) => routineSymbol(document, routine))
+        ];
+        symbols.sort((a, b) => a.range.start.line - b.range.start.line);
         return symbols;
     }
 }

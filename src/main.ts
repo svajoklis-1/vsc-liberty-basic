@@ -1,19 +1,21 @@
 import * as vscode from 'vscode';
-import { createReadStream } from 'fs';
 
 import LibertyBasicDocumentSymbolProvider from "./symbol-provider";
+import LibertyBasicFoldingRangeProvider from "./folding-provider";
+
+const selector: vscode.DocumentSelector = { language: "libertybasic" };
 
 export function activate (ctx: vscode.ExtensionContext): void
 {
-    // registerSymbolProvider(DocumentSelector, DocumentSymbolProvider, metaData)
-
-    /* ctx.subscriptions.push(vscode.languages.registerXProvider(MODE?, new Provider())) */
-
     ctx.subscriptions.push(
         vscode.languages.registerDocumentSymbolProvider(
-            { language: "libertybasic" },
+            selector,
             new LibertyBasicDocumentSymbolProvider(),
             { label: "Liberty BASIC" }
+        ),
+        vscode.languages.registerFoldingRangeProvider(
+            selector,
+            new LibertyBasicFoldingRangeProvider()
         )
     );
 }

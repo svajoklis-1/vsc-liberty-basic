@@ -2,9 +2,9 @@
     "name": "liberty-basic",
     "displayName": "Liberty BASIC",
     "description": "Support for Liberty BASIC",
-    "version": "1.0.7",
+    "version": "1.1.0",
     "engines": {
-        "vscode": "^1.44.0"
+        "vscode": "^1.100.0"
     },
     "icon": "images/liberty.png",
     "repository": {
@@ -15,13 +15,6 @@
         "Programming Languages"
     ],
     "contributes": {
-        "themes": [
-            {
-                "label": "Liberty BASIC",
-                "uiTheme": "vs",
-                "path": "./themes/liberty-basic-theme.json"
-            }
-        ],
         "languages": [
             {
                 "id": "libertybasic",
@@ -45,19 +38,24 @@
     },
     "publisher": "vytenis-narusis",
     "main": "./out/main.js",
-    "activationEvents": [
-        "onLanguage:libertybasic"
-    ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
-        "compile": "npx tsc -p ./",
-        "lint": "npx tslint -p ./",
-        "watch": "npx tsc -watch -p ./"
+        "compile": "tsc -p ./",
+        "lint": "eslint src",
+        "watch": "tsc -watch -p ./",
+        "test": "npm run compile && npm run test:unit && npm run test:grammar",
+        "test:unit": "node --test \"out/test/**/*.test.js\"",
+        "test:grammar": "vscode-tmgrammar-snap \"test/grammar/*.bas\"",
+        "package": "vsce package"
     },
     "devDependencies": {
-        "@types/node": "^12.12.0",
-        "@types/vscode": "^1.32.0",
-        "tslint": "^5.19.0",
-        "typescript": "^3.8.3"
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^20.19.0",
+        "@types/vscode": "~1.100.0",
+        "@vscode/vsce": "^4.0.0",
+        "eslint": "^10.12.0",
+        "typescript": "~6.0.3",
+        "typescript-eslint": "^8.71.1",
+        "vscode-tmgrammar-test": "^0.1.3"
     }
 }

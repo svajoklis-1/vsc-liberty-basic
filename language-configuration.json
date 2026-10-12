@@ -1,28 +1,33 @@
 {
     "comments": {
-        // symbol used for single line comment. Remove this entry if your language does not support line comments
         "lineComment": "'"
-        // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
-        // "blockComment": []
     },
-    // symbols used as brackets
     "brackets": [
         ["(", ")"]
     ],
-    // symbols that are auto closed when typing
     "autoClosingPairs": [
-        { "open": "(", "close": ")", "notIn": [ "string", "comment" ] },
-        { "open": "\"", "close": "\"", "notIn": [ "string", "comment" ] }
+        { "open": "(", "close": ")", "notIn": ["string", "comment"] },
+        { "open": "[", "close": "]", "notIn": ["string", "comment"] },
+        { "open": "\"", "close": "\"", "notIn": ["string", "comment"] }
     ],
-    // symbols that can be used to surround a selection
     "surroundingPairs": [
         ["(", ")"],
+        ["[", "]"],
         ["\"", "\""]
     ],
+    // Identifiers may contain dots and end in $; handles start with #
+    "wordPattern": "(-?\\d*\\.\\d+(?:[eE][+-]?\\d+)?)|(#?[A-Za-z_][A-Za-z0-9._]*\\$?)|(-?\\d+(?:[eE][+-]?\\d+)?)",
     "indentationRules": {
-        // for, while, sub, function, select case, case
-        // "increaseIndentPattern": "(^|.*?:)[ \\t]*(?!(rem|'))(if|for|while|sub|function|select[ \\t]+case|case)[^:]*?$",
-        // next, wend, end sub, end function, end select
-        // "decreaseIndentPattern": "(^|.*?:)[ \\t]*(?!(rem|'))(end[ \\t]+if|next|wend|end[ \\t]+sub|end[ \\t]+function|end[ \\t]+select)[^:]*?$"
+        // SUB, FUNCTION, block IF (THEN at end of line), ELSE, FOR, WHILE, DO, SELECT CASE, CASE
+        // (?![\w.$]) is a word boundary that also treats . and $ as part of names
+        "increaseIndentPattern": {
+            "pattern": "^\\s*((sub|function)\\s+[a-z]|if(?![\\w.$]).*(?<![\\w.$#])then\\s*('.*)?$|else\\s*('.*)?$|(for|while|do|case)(?![\\w.$])|select\\s+case(?![\\w.$]))",
+            "flags": "i"
+        },
+        // END SUB/FUNCTION/IF/SELECT, NEXT, WEND, LOOP, ELSE, CASE
+        "decreaseIndentPattern": {
+            "pattern": "^\\s*(end\\s+(sub|function|if|select)|next|wend|loop|else|case)(?![\\w.$])",
+            "flags": "i"
+        }
     }
 }

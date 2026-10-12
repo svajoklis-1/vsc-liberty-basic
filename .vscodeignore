@@ -7,3 +7,9 @@ vsc-extension-quickstart.md
 **/*.map
 **/tsconfig.json
 **/tsconfig.base.json
+.npmrc
+eslint.config.mjs
+out/test/**
+test/**
+ref/**
+CLAUDE.md

@@ -1,0 +1,1114 @@
+>' Liberty BASIC 4.5.1 grammar fixture - snapshot in sample.bas.snap
+#^ source.libertybasic comment.line.apostrophe.libertybasic punctuation.definition.comment.libertybasic
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.libertybasic comment.line.apostrophe.libertybasic
+>REM classic comment: with a colon
+#^^^ source.libertybasic comment.line.rem.libertybasic punctuation.definition.comment.libertybasic
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.libertybasic comment.line.rem.libertybasic
+>rem
+#^^^ source.libertybasic comment.line.rem.libertybasic punctuation.definition.comment.libertybasic
+>remainder = 5 : premium = 2
+#^^^^^^^^^ source.libertybasic variable.other.libertybasic
+#         ^ source.libertybasic
+#          ^ source.libertybasic keyword.operator.comparison.libertybasic
+#           ^ source.libertybasic
+#            ^ source.libertybasic constant.numeric.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic punctuation.separator.statement.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^^^ source.libertybasic variable.other.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                         ^ source.libertybasic
+#                          ^ source.libertybasic constant.numeric.libertybasic
+>print "it's not a comment" ' but this is
+#^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#       ^^^^^^^^^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic comment.line.apostrophe.libertybasic punctuation.definition.comment.libertybasic
+#                            ^^^^^^^^^^^^ source.libertybasic comment.line.apostrophe.libertybasic
+>print "unterminated string
+#^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#       ^^^^^^^^^^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+>nomainwin
+#^^^^^^^^^ source.libertybasic keyword.other.statement.libertybasic
+>
+>global title$, user.first$
+#^^^^^^ source.libertybasic storage.modifier.libertybasic
+#      ^ source.libertybasic
+#       ^^^^^^ source.libertybasic variable.other.libertybasic
+#             ^ source.libertybasic punctuation.separator.comma.libertybasic
+#              ^ source.libertybasic
+#               ^^^^^^^^^^^ source.libertybasic variable.other.libertybasic
+>dim scores(10), names$(10)
+#^^^ source.libertybasic storage.type.libertybasic
+#   ^ source.libertybasic
+#    ^^^^^^ source.libertybasic variable.other.libertybasic
+#          ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#           ^^ source.libertybasic constant.numeric.libertybasic
+#             ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#              ^ source.libertybasic punctuation.separator.comma.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^^ source.libertybasic variable.other.libertybasic
+#                      ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                       ^^ source.libertybasic constant.numeric.libertybasic
+#                         ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>order = origin or android xor xoring and andy
+#^^^^^ source.libertybasic variable.other.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic keyword.operator.comparison.libertybasic
+#       ^ source.libertybasic
+#        ^^^^^^ source.libertybasic variable.other.libertybasic
+#              ^ source.libertybasic
+#               ^^ source.libertybasic keyword.operator.logical.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^^^^^ source.libertybasic variable.other.libertybasic
+#                         ^ source.libertybasic
+#                          ^^^ source.libertybasic keyword.operator.logical.libertybasic
+#                             ^ source.libertybasic
+#                              ^^^^^^ source.libertybasic variable.other.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^^^ source.libertybasic keyword.operator.logical.libertybasic
+#                                        ^ source.libertybasic
+#                                         ^^^^ source.libertybasic variable.other.libertybasic
+>result = not(a = b) and (c <> d) or (e <= f) or (g >= h)
+#^^^^^^ source.libertybasic variable.other.libertybasic
+#      ^ source.libertybasic
+#       ^ source.libertybasic keyword.operator.comparison.libertybasic
+#        ^ source.libertybasic
+#         ^^^ source.libertybasic keyword.operator.logical.libertybasic
+#            ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#             ^ source.libertybasic variable.other.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                ^ source.libertybasic
+#                 ^ source.libertybasic variable.other.libertybasic
+#                  ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^ source.libertybasic keyword.operator.logical.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                         ^ source.libertybasic variable.other.libertybasic
+#                          ^ source.libertybasic
+#                           ^^ source.libertybasic keyword.operator.comparison.libertybasic
+#                             ^ source.libertybasic
+#                              ^ source.libertybasic variable.other.libertybasic
+#                               ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^ source.libertybasic keyword.operator.logical.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                                     ^ source.libertybasic variable.other.libertybasic
+#                                      ^ source.libertybasic
+#                                       ^^ source.libertybasic keyword.operator.comparison.libertybasic
+#                                         ^ source.libertybasic
+#                                          ^ source.libertybasic variable.other.libertybasic
+#                                           ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                                            ^ source.libertybasic
+#                                             ^^ source.libertybasic keyword.operator.logical.libertybasic
+#                                               ^ source.libertybasic
+#                                                ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                                                 ^ source.libertybasic variable.other.libertybasic
+#                                                  ^ source.libertybasic
+#                                                   ^^ source.libertybasic keyword.operator.comparison.libertybasic
+#                                                     ^ source.libertybasic
+#                                                      ^ source.libertybasic variable.other.libertybasic
+#                                                       ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>total = 15 mod 4 + 2 ^ 3 - 7 * 1.5 / .25 + 1e5 + 2.5E-3
+#^^^^^ source.libertybasic variable.other.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic keyword.operator.comparison.libertybasic
+#       ^ source.libertybasic
+#        ^^ source.libertybasic constant.numeric.libertybasic
+#          ^ source.libertybasic
+#           ^^^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic constant.numeric.libertybasic
+#                ^ source.libertybasic
+#                 ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                  ^ source.libertybasic
+#                   ^ source.libertybasic constant.numeric.libertybasic
+#                    ^ source.libertybasic
+#                     ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                      ^ source.libertybasic
+#                       ^ source.libertybasic constant.numeric.libertybasic
+#                        ^ source.libertybasic
+#                         ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic constant.numeric.libertybasic
+#                            ^ source.libertybasic
+#                             ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                              ^ source.libertybasic
+#                               ^^^ source.libertybasic constant.numeric.libertybasic
+#                                  ^ source.libertybasic
+#                                   ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^^^ source.libertybasic constant.numeric.libertybasic
+#                                        ^ source.libertybasic
+#                                         ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                          ^ source.libertybasic
+#                                           ^^^ source.libertybasic constant.numeric.libertybasic
+#                                              ^ source.libertybasic
+#                                               ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                                ^ source.libertybasic
+#                                                 ^^^^^^ source.libertybasic constant.numeric.libertybasic
+>step$ = word$("a b c", 2) + left$ (title$, 1) + upper$(user.first$)
+#^^^^^ source.libertybasic variable.other.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic keyword.operator.comparison.libertybasic
+#       ^ source.libertybasic
+#        ^^^^^ source.libertybasic support.function.builtin.libertybasic
+#             ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#               ^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                    ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                     ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                      ^ source.libertybasic
+#                       ^ source.libertybasic constant.numeric.libertybasic
+#                        ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                         ^ source.libertybasic
+#                          ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                           ^ source.libertybasic
+#                            ^^^^^ source.libertybasic support.function.builtin.libertybasic
+#                                 ^ source.libertybasic
+#                                  ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                                   ^^^^^^ source.libertybasic variable.other.libertybasic
+#                                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                          ^ source.libertybasic
+#                                           ^ source.libertybasic constant.numeric.libertybasic
+#                                            ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                                             ^ source.libertybasic
+#                                              ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                               ^ source.libertybasic
+#                                                ^^^^^^ source.libertybasic support.function.builtin.libertybasic
+#                                                      ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                                                       ^^^^^^^^^^^ source.libertybasic variable.other.libertybasic
+#                                                                  ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>x = len(title$) + int(rnd(1) * 10)
+#^ source.libertybasic variable.other.libertybasic
+# ^ source.libertybasic
+#  ^ source.libertybasic keyword.operator.comparison.libertybasic
+#   ^ source.libertybasic
+#    ^^^ source.libertybasic support.function.builtin.libertybasic
+#       ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#        ^^^^^^ source.libertybasic variable.other.libertybasic
+#              ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#               ^ source.libertybasic
+#                ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^ source.libertybasic support.function.builtin.libertybasic
+#                     ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                      ^^^ source.libertybasic support.function.builtin.libertybasic
+#                         ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                          ^ source.libertybasic constant.numeric.libertybasic
+#                           ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                            ^ source.libertybasic
+#                             ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                              ^ source.libertybasic
+#                               ^^ source.libertybasic constant.numeric.libertybasic
+#                                 ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>
+>[main]
+#^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    WindowWidth = 400 : WindowHeight = 300
+#^^^^ source.libertybasic
+#    ^^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#               ^ source.libertybasic
+#                ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^ source.libertybasic constant.numeric.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic punctuation.separator.statement.libertybasic
+#                       ^ source.libertybasic
+#                        ^^^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                                      ^ source.libertybasic
+#                                       ^^^ source.libertybasic constant.numeric.libertybasic
+>    UpperLeftX = int((DisplayWidth - WindowWidth) / 2)
+#^^^^ source.libertybasic
+#    ^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                ^ source.libertybasic
+#                 ^^^ source.libertybasic support.function.builtin.libertybasic
+#                    ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                     ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                      ^^^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#                                  ^ source.libertybasic
+#                                   ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#                                                ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                                                 ^ source.libertybasic
+#                                                  ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                                                   ^ source.libertybasic
+#                                                    ^ source.libertybasic constant.numeric.libertybasic
+#                                                     ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>    BackgroundColor$ = "buttonface"
+#^^^^ source.libertybasic
+#    ^^^^^^^^^^^^^^^^ source.libertybasic support.variable.libertybasic
+#                    ^ source.libertybasic
+#                     ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                      ^ source.libertybasic
+#                       ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                        ^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    stylebits #win, _WS_MAXIMIZEBOX, 0, 0, 0
+#^^^^ source.libertybasic
+#    ^^^^^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^^^^ source.libertybasic variable.other.handle.libertybasic
+#                  ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^^^^^^^^^^^^^ source.libertybasic support.constant.windows.libertybasic
+#                                   ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^ source.libertybasic constant.numeric.libertybasic
+#                                      ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                       ^ source.libertybasic
+#                                        ^ source.libertybasic constant.numeric.libertybasic
+#                                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                          ^ source.libertybasic
+#                                           ^ source.libertybasic constant.numeric.libertybasic
+>    statictext #win.label, "Name:", 10, 10, 60, 24
+#^^^^ source.libertybasic
+#    ^^^^^^^^^^ source.libertybasic keyword.other.gui.libertybasic
+#              ^ source.libertybasic
+#               ^^^^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                            ^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                                 ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                                  ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^^ source.libertybasic constant.numeric.libertybasic
+#                                      ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                       ^ source.libertybasic
+#                                        ^^ source.libertybasic constant.numeric.libertybasic
+#                                          ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                           ^ source.libertybasic
+#                                            ^^ source.libertybasic constant.numeric.libertybasic
+#                                              ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                               ^ source.libertybasic
+#                                                ^^ source.libertybasic constant.numeric.libertybasic
+>    textbox #win.name, 80, 10, 200, 24
+#^^^^ source.libertybasic
+#    ^^^^^^^ source.libertybasic keyword.other.gui.libertybasic
+#           ^ source.libertybasic
+#            ^^^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#                     ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                      ^ source.libertybasic
+#                       ^^ source.libertybasic constant.numeric.libertybasic
+#                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                          ^ source.libertybasic
+#                           ^^ source.libertybasic constant.numeric.libertybasic
+#                             ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                              ^ source.libertybasic
+#                               ^^^ source.libertybasic constant.numeric.libertybasic
+#                                  ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^^ source.libertybasic constant.numeric.libertybasic
+>    button #win.ok, "OK", [okClick], UL, 10, 50, 80, 24
+#^^^^ source.libertybasic
+#    ^^^^^^ source.libertybasic keyword.other.gui.libertybasic
+#          ^ source.libertybasic
+#           ^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#                  ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                   ^ source.libertybasic
+#                    ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                     ^^ source.libertybasic string.quoted.double.libertybasic
+#                       ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                        ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                         ^ source.libertybasic
+#                          ^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+#                                   ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                    ^ source.libertybasic
+#                                     ^^ source.libertybasic variable.other.libertybasic
+#                                       ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                        ^ source.libertybasic
+#                                         ^^ source.libertybasic constant.numeric.libertybasic
+#                                           ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                            ^ source.libertybasic
+#                                             ^^ source.libertybasic constant.numeric.libertybasic
+#                                               ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                                ^ source.libertybasic
+#                                                 ^^ source.libertybasic constant.numeric.libertybasic
+#                                                   ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                                    ^ source.libertybasic
+#                                                     ^^ source.libertybasic constant.numeric.libertybasic
+>    menu #win, "&File", "E&xit", [quit]
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.gui.libertybasic
+#        ^ source.libertybasic
+#         ^^^^ source.libertybasic variable.other.handle.libertybasic
+#             ^ source.libertybasic punctuation.separator.comma.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                ^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                     ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                      ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                         ^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                               ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    open title$ for window_nf as #win
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^^^^^^ source.libertybasic variable.other.libertybasic
+#               ^ source.libertybasic
+#                ^^^ source.libertybasic keyword.control.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^^^^^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                             ^ source.libertybasic
+#                              ^^ source.libertybasic keyword.other.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^^^ source.libertybasic variable.other.handle.libertybasic
+>    #win "trapclose [quit]"
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic variable.other.handle.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^^^^^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                          ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    print #win.name, "!setfocus"
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#         ^ source.libertybasic
+#          ^^^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#                   ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                    ^ source.libertybasic
+#                     ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                      ^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                               ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    timer 1000, [tick]
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#         ^ source.libertybasic
+#          ^^^^ source.libertybasic constant.numeric.libertybasic
+#              ^ source.libertybasic punctuation.separator.comma.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    wait
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>
+>[okClick]
+#^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    #win.name "!contents? name$"
+#^^^^ source.libertybasic
+#    ^^^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#               ^^^^^^^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                               ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    var$ = "#win.ok"
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic variable.other.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic keyword.operator.comparison.libertybasic
+#          ^ source.libertybasic
+#           ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#            ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                   ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    #var$ "disable"
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic variable.other.handle.libertybasic
+#         ^ source.libertybasic
+#          ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#           ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    if name$ = "" then notice "Empty!" : goto [main]
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^^^^^ source.libertybasic variable.other.libertybasic
+#            ^ source.libertybasic
+#             ^ source.libertybasic keyword.operator.comparison.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^^ source.libertybasic keyword.control.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                             ^ source.libertybasic
+#                              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                               ^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                                     ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                                      ^ source.libertybasic
+#                                       ^ source.libertybasic punctuation.separator.statement.libertybasic
+#                                        ^ source.libertybasic
+#                                         ^^^^ source.libertybasic keyword.control.libertybasic
+#                                             ^ source.libertybasic
+#                                              ^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    if len(name$) > 20 then [tooLong] else print "ok"
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^^^ source.libertybasic support.function.builtin.libertybasic
+#          ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#           ^^^^^ source.libertybasic variable.other.libertybasic
+#                ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                 ^ source.libertybasic
+#                  ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                   ^ source.libertybasic
+#                    ^^ source.libertybasic constant.numeric.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^ source.libertybasic keyword.control.libertybasic
+#                           ^ source.libertybasic
+#                            ^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+#                                     ^ source.libertybasic
+#                                      ^^^^ source.libertybasic keyword.control.libertybasic
+#                                          ^ source.libertybasic
+#                                           ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                                                ^ source.libertybasic
+#                                                 ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                                                  ^^ source.libertybasic string.quoted.double.libertybasic
+#                                                    ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    call greet name$, 3
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+#        ^ source.libertybasic
+#         ^^^^^ source.libertybasic entity.name.function.libertybasic
+#              ^ source.libertybasic
+#               ^^^^^ source.libertybasic variable.other.libertybasic
+#                    ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic constant.numeric.libertybasic
+>    wait
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>
+>[tick]
+#^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    if Inkey$ <> "" then
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^^^^^^ source.libertybasic support.variable.libertybasic
+#             ^ source.libertybasic
+#              ^^ source.libertybasic keyword.operator.comparison.libertybasic
+#                ^ source.libertybasic
+#                 ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^^ source.libertybasic keyword.control.libertybasic
+>        print "key"
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#               ^^^ source.libertybasic string.quoted.double.libertybasic
+#                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    else
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>        print MouseX; ","; MouseY
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^^^^^^ source.libertybasic support.variable.libertybasic
+#                    ^ source.libertybasic punctuation.separator.semicolon.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                       ^ source.libertybasic string.quoted.double.libertybasic
+#                        ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                         ^ source.libertybasic punctuation.separator.semicolon.libertybasic
+#                          ^ source.libertybasic
+#                           ^^^^^^ source.libertybasic support.variable.libertybasic
+>    end if
+#^^^^ source.libertybasic
+#    ^^^ source.libertybasic keyword.control.libertybasic
+#       ^ source.libertybasic
+#        ^^ source.libertybasic keyword.control.libertybasic
+>    wait
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>
+>10 REM numeric branch labels
+#^^ source.libertybasic entity.name.label.line-number.libertybasic
+#  ^ source.libertybasic
+#   ^^^ source.libertybasic comment.line.rem.libertybasic punctuation.definition.comment.libertybasic
+#      ^^^^^^^^^^^^^^^^^^^^^^ source.libertybasic comment.line.rem.libertybasic
+>20 for i = 10 to 1 step -.5
+#^^ source.libertybasic entity.name.label.line-number.libertybasic
+#  ^ source.libertybasic
+#   ^^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^ source.libertybasic variable.other.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic keyword.operator.comparison.libertybasic
+#          ^ source.libertybasic
+#           ^^ source.libertybasic constant.numeric.libertybasic
+#             ^ source.libertybasic
+#              ^^ source.libertybasic keyword.control.libertybasic
+#                ^ source.libertybasic
+#                 ^ source.libertybasic constant.numeric.libertybasic
+#                  ^ source.libertybasic
+#                   ^^^^ source.libertybasic keyword.control.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                         ^^ source.libertybasic constant.numeric.libertybasic
+>30 print i
+#^^ source.libertybasic entity.name.label.line-number.libertybasic
+#  ^ source.libertybasic
+#   ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic variable.other.libertybasic
+>40 next i
+#^^ source.libertybasic entity.name.label.line-number.libertybasic
+#  ^ source.libertybasic
+#   ^^^^ source.libertybasic keyword.control.libertybasic
+#       ^ source.libertybasic
+#        ^ source.libertybasic variable.other.libertybasic
+>
+>[files]
+#^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    open "data.txt" for input as #f
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^ source.libertybasic keyword.control.libertybasic
+#                       ^ source.libertybasic
+#                        ^^^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                             ^ source.libertybasic
+#                              ^^ source.libertybasic keyword.other.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^ source.libertybasic variable.other.handle.libertybasic
+>    while eof(#f) = 0
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.control.libertybasic
+#         ^ source.libertybasic
+#          ^^^ source.libertybasic support.function.builtin.libertybasic
+#             ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#              ^^ source.libertybasic variable.other.handle.libertybasic
+#                ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                 ^ source.libertybasic
+#                  ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                   ^ source.libertybasic
+#                    ^ source.libertybasic constant.numeric.libertybasic
+>        line input #f, text$
+#^^^^^^^^ source.libertybasic
+#        ^^^^^^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                  ^ source.libertybasic
+#                   ^^ source.libertybasic variable.other.handle.libertybasic
+#                     ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^^ source.libertybasic variable.other.libertybasic
+>        print inputto$(#f, ",")
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^^^^^^^^ source.libertybasic support.function.builtin.libertybasic
+#                      ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                       ^^ source.libertybasic variable.other.handle.libertybasic
+#                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                            ^ source.libertybasic string.quoted.double.libertybasic
+#                             ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                              ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>    wend
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>    close #f
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#         ^ source.libertybasic
+#          ^^ source.libertybasic variable.other.handle.libertybasic
+>    open "out.txt" for append as #o : print #o, "x" : close #o
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                 ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                  ^ source.libertybasic
+#                   ^^^ source.libertybasic keyword.control.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                             ^ source.libertybasic
+#                              ^^ source.libertybasic keyword.other.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^ source.libertybasic variable.other.handle.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^ source.libertybasic punctuation.separator.statement.libertybasic
+#                                     ^ source.libertybasic
+#                                      ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                                           ^ source.libertybasic
+#                                            ^^ source.libertybasic variable.other.handle.libertybasic
+#                                              ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                               ^ source.libertybasic
+#                                                ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                                                 ^ source.libertybasic string.quoted.double.libertybasic
+#                                                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                                                   ^ source.libertybasic
+#                                                    ^ source.libertybasic punctuation.separator.statement.libertybasic
+#                                                     ^ source.libertybasic
+#                                                      ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                                                           ^ source.libertybasic
+#                                                            ^^ source.libertybasic variable.other.handle.libertybasic
+>    open "rec.dat" for random as #r len = 128
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                 ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                  ^ source.libertybasic
+#                   ^^^ source.libertybasic keyword.control.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                             ^ source.libertybasic
+#                              ^^ source.libertybasic keyword.other.libertybasic
+#                                ^ source.libertybasic
+#                                 ^^ source.libertybasic variable.other.handle.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^^^ source.libertybasic variable.other.libertybasic
+#                                       ^ source.libertybasic
+#                                        ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                                         ^ source.libertybasic
+#                                          ^^^ source.libertybasic constant.numeric.libertybasic
+>    field #r, 20 as name$, 4 as age
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#         ^ source.libertybasic
+#          ^^ source.libertybasic variable.other.handle.libertybasic
+#            ^ source.libertybasic punctuation.separator.comma.libertybasic
+#             ^ source.libertybasic
+#              ^^ source.libertybasic constant.numeric.libertybasic
+#                ^ source.libertybasic
+#                 ^^ source.libertybasic keyword.other.libertybasic
+#                   ^ source.libertybasic
+#                    ^^^^^ source.libertybasic variable.other.libertybasic
+#                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic constant.numeric.libertybasic
+#                            ^ source.libertybasic
+#                             ^^ source.libertybasic keyword.other.libertybasic
+#                               ^ source.libertybasic
+#                                ^^^ source.libertybasic variable.other.libertybasic
+>    open "user32" for dll as #user32
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^ source.libertybasic keyword.control.libertybasic
+#                     ^ source.libertybasic
+#                      ^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                         ^ source.libertybasic
+#                          ^^ source.libertybasic keyword.other.libertybasic
+#                            ^ source.libertybasic
+#                             ^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+>    open "Gfx" for graphics_fs_nsb as #gfx
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.other.statement.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#          ^^^ source.libertybasic string.quoted.double.libertybasic
+#             ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#              ^ source.libertybasic
+#               ^^^ source.libertybasic keyword.control.libertybasic
+#                  ^ source.libertybasic
+#                   ^^^^^^^^^^^^^^^ source.libertybasic keyword.other.open-mode.libertybasic
+#                                  ^ source.libertybasic
+#                                   ^^ source.libertybasic keyword.other.libertybasic
+#                                     ^ source.libertybasic
+#                                      ^^^^ source.libertybasic variable.other.handle.libertybasic
+>
+>[dll]
+#^^^^^ source.libertybasic entity.name.label.libertybasic
+>    struct winRect, _
+#^^^^ source.libertybasic
+#    ^^^^^^ source.libertybasic storage.type.libertybasic
+#          ^ source.libertybasic
+#           ^^^^^^^ source.libertybasic variable.other.libertybasic
+#                  ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                   ^ source.libertybasic
+#                    ^ source.libertybasic punctuation.separator.continuation.line.libertybasic
+>        orgX as long, _
+#^^^^^^^^ source.libertybasic
+#        ^^^^ source.libertybasic variable.other.libertybasic
+#            ^ source.libertybasic
+#             ^^ source.libertybasic keyword.other.libertybasic
+#               ^ source.libertybasic
+#                ^^^^ source.libertybasic storage.type.primitive.libertybasic
+#                    ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic punctuation.separator.continuation.line.libertybasic
+>        orgY as ulong
+#^^^^^^^^ source.libertybasic
+#        ^^^^ source.libertybasic variable.other.libertybasic
+#            ^ source.libertybasic
+#             ^^ source.libertybasic keyword.other.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^ source.libertybasic storage.type.primitive.libertybasic
+>    winRect.orgX.struct = 100
+#^^^^ source.libertybasic
+#    ^^^^^^^^^^^^^^^^^^^ source.libertybasic variable.other.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                         ^ source.libertybasic
+#                          ^^^ source.libertybasic constant.numeric.libertybasic
+>    calldll #user32, "GetWindowRect", _
+#^^^^ source.libertybasic
+#    ^^^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#           ^ source.libertybasic
+#            ^^^^^^^ source.libertybasic variable.other.handle.libertybasic
+#                   ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                    ^ source.libertybasic
+#                     ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                      ^^^^^^^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                                   ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                                    ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                                     ^ source.libertybasic
+#                                      ^ source.libertybasic punctuation.separator.continuation.line.libertybasic
+>        hwnd(#win) as ulong, _
+#^^^^^^^^ source.libertybasic
+#        ^^^^ source.libertybasic support.function.builtin.libertybasic
+#            ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#             ^^^^ source.libertybasic variable.other.handle.libertybasic
+#                 ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+#                  ^ source.libertybasic
+#                   ^^ source.libertybasic keyword.other.libertybasic
+#                     ^ source.libertybasic
+#                      ^^^^^ source.libertybasic storage.type.primitive.libertybasic
+#                           ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                            ^ source.libertybasic
+#                             ^ source.libertybasic punctuation.separator.continuation.line.libertybasic
+>        winRect as struct, _
+#^^^^^^^^ source.libertybasic
+#        ^^^^^^^ source.libertybasic variable.other.libertybasic
+#               ^ source.libertybasic
+#                ^^ source.libertybasic keyword.other.libertybasic
+#                  ^ source.libertybasic
+#                   ^^^^^^ source.libertybasic storage.type.libertybasic
+#                         ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                          ^ source.libertybasic
+#                           ^ source.libertybasic punctuation.separator.continuation.line.libertybasic
+>        result as long
+#^^^^^^^^ source.libertybasic
+#        ^^^^^^ source.libertybasic variable.other.libertybasic
+#              ^ source.libertybasic
+#               ^^ source.libertybasic keyword.other.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^^ source.libertybasic storage.type.primitive.libertybasic
+>
+>[errors]
+#^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    on error goto [handler]
+#^^^^ source.libertybasic
+#    ^^^^^^^^ source.libertybasic keyword.control.libertybasic
+#            ^ source.libertybasic
+#             ^^^^ source.libertybasic keyword.control.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    do
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+>        count = count + 1
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic variable.other.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic keyword.operator.comparison.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^ source.libertybasic variable.other.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic constant.numeric.libertybasic
+>        if count > 3 then exit do
+#^^^^^^^^ source.libertybasic
+#        ^^ source.libertybasic keyword.control.libertybasic
+#          ^ source.libertybasic
+#           ^^^^^ source.libertybasic variable.other.libertybasic
+#                ^ source.libertybasic
+#                 ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                  ^ source.libertybasic
+#                   ^ source.libertybasic constant.numeric.libertybasic
+#                    ^ source.libertybasic
+#                     ^^^^ source.libertybasic keyword.control.libertybasic
+#                         ^ source.libertybasic
+#                          ^^^^ source.libertybasic keyword.control.libertybasic
+#                              ^ source.libertybasic
+#                               ^^ source.libertybasic keyword.control.libertybasic
+>    loop until count >= 10
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+#        ^ source.libertybasic
+#         ^^^^^ source.libertybasic keyword.control.libertybasic
+#              ^ source.libertybasic
+#               ^^^^^ source.libertybasic variable.other.libertybasic
+#                    ^ source.libertybasic
+#                     ^^ source.libertybasic keyword.operator.comparison.libertybasic
+#                       ^ source.libertybasic
+#                        ^^ source.libertybasic constant.numeric.libertybasic
+>    do while count > 0
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^^^^^ source.libertybasic keyword.control.libertybasic
+#            ^ source.libertybasic
+#             ^^^^^ source.libertybasic variable.other.libertybasic
+#                  ^ source.libertybasic
+#                   ^ source.libertybasic keyword.operator.comparison.libertybasic
+#                    ^ source.libertybasic
+#                     ^ source.libertybasic constant.numeric.libertybasic
+>        count = count - 1
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic variable.other.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic keyword.operator.comparison.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^ source.libertybasic variable.other.libertybasic
+#                     ^ source.libertybasic
+#                      ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                       ^ source.libertybasic
+#                        ^ source.libertybasic constant.numeric.libertybasic
+>    loop
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+>    select case count
+#^^^^ source.libertybasic
+#    ^^^^^^ source.libertybasic keyword.control.libertybasic
+#          ^ source.libertybasic
+#           ^^^^ source.libertybasic keyword.control.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^ source.libertybasic variable.other.libertybasic
+>    case 1, 2
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic constant.numeric.libertybasic
+#          ^ source.libertybasic punctuation.separator.comma.libertybasic
+#           ^ source.libertybasic
+#            ^ source.libertybasic constant.numeric.libertybasic
+>        print "low"
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#               ^^^ source.libertybasic string.quoted.double.libertybasic
+#                  ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    case else
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+#        ^ source.libertybasic
+#         ^^^^ source.libertybasic keyword.control.libertybasic
+>        print "Error: "; Err; " "; Err$
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#               ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                      ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                       ^ source.libertybasic punctuation.separator.semicolon.libertybasic
+#                        ^ source.libertybasic
+#                         ^^^ source.libertybasic support.variable.libertybasic
+#                            ^ source.libertybasic punctuation.separator.semicolon.libertybasic
+#                             ^ source.libertybasic
+#                              ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                               ^ source.libertybasic string.quoted.double.libertybasic
+#                                ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                                 ^ source.libertybasic punctuation.separator.semicolon.libertybasic
+#                                  ^ source.libertybasic
+#                                   ^^^^ source.libertybasic support.variable.libertybasic
+>    end select
+#^^^^ source.libertybasic
+#    ^^^ source.libertybasic keyword.control.libertybasic
+#       ^ source.libertybasic
+#        ^^^^^^ source.libertybasic keyword.control.libertybasic
+>    gosub [sub.routine]
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.control.libertybasic
+#         ^ source.libertybasic
+#          ^^^^^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    end
+#^^^^ source.libertybasic
+#    ^^^ source.libertybasic keyword.control.libertybasic
+>
+>[handler]
+#^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    resume
+#^^^^ source.libertybasic
+#    ^^^^^^ source.libertybasic keyword.control.libertybasic
+>
+>[sub.routine]
+#^^^^^^^^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    return
+#^^^^ source.libertybasic
+#    ^^^^^^ source.libertybasic keyword.control.libertybasic
+>
+>[quit]
+#^^^^^^ source.libertybasic entity.name.label.libertybasic
+>    close #win
+#^^^^ source.libertybasic
+#    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#         ^ source.libertybasic
+#          ^^^^ source.libertybasic variable.other.handle.libertybasic
+>    end
+#^^^^ source.libertybasic
+#    ^^^ source.libertybasic keyword.control.libertybasic
+>
+>function greeting$(who$, byref n)
+#^^^^^^^^ source.libertybasic storage.type.function.libertybasic
+#        ^ source.libertybasic
+#         ^^^^^^^^^ source.libertybasic entity.name.function.libertybasic
+#                  ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                   ^^^^ source.libertybasic variable.other.libertybasic
+#                       ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                        ^ source.libertybasic
+#                         ^^^^^ source.libertybasic storage.modifier.libertybasic
+#                              ^ source.libertybasic
+#                               ^ source.libertybasic variable.other.libertybasic
+#                                ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>    if n = 0 then exit function
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^ source.libertybasic variable.other.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic keyword.operator.comparison.libertybasic
+#          ^ source.libertybasic
+#           ^ source.libertybasic constant.numeric.libertybasic
+#            ^ source.libertybasic
+#             ^^^^ source.libertybasic keyword.control.libertybasic
+#                 ^ source.libertybasic
+#                  ^^^^ source.libertybasic keyword.control.libertybasic
+#                      ^ source.libertybasic
+#                       ^^^^^^^^ source.libertybasic storage.type.function.libertybasic
+>    greeting$ = "Hello, " + who$
+#^^^^ source.libertybasic
+#    ^^^^^^^^^ source.libertybasic variable.other.libertybasic
+#             ^ source.libertybasic
+#              ^ source.libertybasic keyword.operator.comparison.libertybasic
+#               ^ source.libertybasic
+#                ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                 ^^^^^^^ source.libertybasic string.quoted.double.libertybasic
+#                        ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+#                         ^ source.libertybasic
+#                          ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#                           ^ source.libertybasic
+#                            ^^^^ source.libertybasic variable.other.libertybasic
+>end function
+#^^^ source.libertybasic keyword.control.libertybasic
+#   ^ source.libertybasic
+#    ^^^^^^^^ source.libertybasic storage.type.function.libertybasic
+>
+>sub greet who$, times
+#^^^ source.libertybasic storage.type.function.libertybasic
+#   ^ source.libertybasic
+#    ^^^^^ source.libertybasic entity.name.function.libertybasic
+#         ^ source.libertybasic
+#          ^^^^ source.libertybasic variable.other.libertybasic
+#              ^ source.libertybasic punctuation.separator.comma.libertybasic
+#               ^ source.libertybasic
+#                ^^^^^ source.libertybasic variable.other.libertybasic
+>    if times < 1 then exit sub else print "go"
+#^^^^ source.libertybasic
+#    ^^ source.libertybasic keyword.control.libertybasic
+#      ^ source.libertybasic
+#       ^^^^^ source.libertybasic variable.other.libertybasic
+#            ^ source.libertybasic
+#             ^ source.libertybasic keyword.operator.comparison.libertybasic
+#              ^ source.libertybasic
+#               ^ source.libertybasic constant.numeric.libertybasic
+#                ^ source.libertybasic
+#                 ^^^^ source.libertybasic keyword.control.libertybasic
+#                     ^ source.libertybasic
+#                      ^^^^ source.libertybasic keyword.control.libertybasic
+#                          ^ source.libertybasic
+#                           ^^^ source.libertybasic storage.type.function.libertybasic
+#                              ^ source.libertybasic
+#                               ^^^^ source.libertybasic keyword.control.libertybasic
+#                                   ^ source.libertybasic
+#                                    ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#                                         ^ source.libertybasic
+#                                          ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.begin.libertybasic
+#                                           ^^ source.libertybasic string.quoted.double.libertybasic
+#                                             ^ source.libertybasic string.quoted.double.libertybasic punctuation.definition.string.end.libertybasic
+>    for t = 1 to times
+#^^^^ source.libertybasic
+#    ^^^ source.libertybasic keyword.control.libertybasic
+#       ^ source.libertybasic
+#        ^ source.libertybasic variable.other.libertybasic
+#         ^ source.libertybasic
+#          ^ source.libertybasic keyword.operator.comparison.libertybasic
+#           ^ source.libertybasic
+#            ^ source.libertybasic constant.numeric.libertybasic
+#             ^ source.libertybasic
+#              ^^ source.libertybasic keyword.control.libertybasic
+#                ^ source.libertybasic
+#                 ^^^^^ source.libertybasic variable.other.libertybasic
+>        print greeting$(who$, t)
+#^^^^^^^^ source.libertybasic
+#        ^^^^^ source.libertybasic keyword.other.statement.libertybasic
+#             ^ source.libertybasic
+#              ^^^^^^^^^ source.libertybasic variable.other.libertybasic
+#                       ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#                        ^^^^ source.libertybasic variable.other.libertybasic
+#                            ^ source.libertybasic punctuation.separator.comma.libertybasic
+#                             ^ source.libertybasic
+#                              ^ source.libertybasic variable.other.libertybasic
+#                               ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>    next t
+#^^^^ source.libertybasic
+#    ^^^^ source.libertybasic keyword.control.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic variable.other.libertybasic
+>end sub
+#^^^ source.libertybasic keyword.control.libertybasic
+#   ^ source.libertybasic
+#    ^^^ source.libertybasic storage.type.function.libertybasic
+>
+>function f(x)
+#^^^^^^^^ source.libertybasic storage.type.function.libertybasic
+#        ^ source.libertybasic
+#         ^ source.libertybasic entity.name.function.libertybasic
+#          ^ source.libertybasic punctuation.parenthesis.open.libertybasic
+#           ^ source.libertybasic variable.other.libertybasic
+#            ^ source.libertybasic punctuation.parenthesis.close.libertybasic
+>    f = x * 2
+#^^^^ source.libertybasic
+#    ^ source.libertybasic variable.other.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic keyword.operator.comparison.libertybasic
+#       ^ source.libertybasic
+#        ^ source.libertybasic variable.other.libertybasic
+#         ^ source.libertybasic
+#          ^ source.libertybasic keyword.operator.arithmetic.libertybasic
+#           ^ source.libertybasic
+#            ^ source.libertybasic constant.numeric.libertybasic
+>End Function
+#^^^ source.libertybasic keyword.control.libertybasic
+#   ^ source.libertybasic
+#    ^^^^^^^^ source.libertybasic storage.type.function.libertybasic
+>
+>Sub s : End Sub
+#^^^ source.libertybasic storage.type.function.libertybasic
+#   ^ source.libertybasic
+#    ^ source.libertybasic entity.name.function.libertybasic
+#     ^ source.libertybasic
+#      ^ source.libertybasic punctuation.separator.statement.libertybasic
+#       ^ source.libertybasic
+#        ^^^ source.libertybasic keyword.control.libertybasic
+#           ^ source.libertybasic
+#            ^^^ source.libertybasic storage.type.function.libertybasic
+>
